@@ -18,12 +18,12 @@
             <h2>Login</h2>
             <form action="login.php" method="POST">
                 <div class="input-box">
-                    <input type="text" required>
+                    <input type="text" name="username" required>
                     <label>Username</label>  
                     <i class='bx bx-user' ></i>  
                 </div>      
                 <div class="input-box">
-                    <input type="password" required>
+                    <input type="password" name="password" required>
                     <label>Password</label>
                     <i class='bx bxs-lock-alt' ></i>
                  </div>
