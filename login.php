@@ -20,7 +20,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
 
-    $querry = "SELECT *FROM  login WHERE username='$username' AND password='$password'";
+    $querry = "SELECT *FROM  login WHERE username=$username AND password=$password";
+    $stmt =$conn->prepare($querry);
+    $stmt->bind_param($username, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     $result = $conn->query($query);
 
